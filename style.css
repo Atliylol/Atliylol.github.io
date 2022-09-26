@@ -1,0 +1,116 @@
+:root {
+	image-rendering: pixelated;
+	--starsize: 7.5rem;
+	--citysize: 15rem;
+}
+
+body {
+	background-image: url("./images/body/stars.png");
+	background-repeat: repeat;
+	background-size: var(--starsize);
+	background-position: 0px;
+	background-blend-mode: darken;
+	animation: stars 4s linear 0s infinite;
+	animation-iteration-count: infinite;
+}
+
+#acidimg {
+	width: 575px;
+	image-rendering: auto;
+}
+#rotpc {
+	height: 250px; 
+	position:absolute;
+	max-width: 50%;
+}
+
+#moontxt {
+	opacity: 0;
+}
+
+#city {
+	margin-top: 85px;
+	opacity: 0;
+	animation: fadein 1s cubic-bezier(0.86,-0.01, 0.58, 1.1) -1s, city 10s linear 0s infinite;
+	animation-fill-mode: forwards;
+	background-image: url("./images/body/center/city.png");
+	background-repeat: repeat-x;
+	background-size: var(--citysize);
+	background-position-y: 125px;
+	height: 255px;
+}
+
+#poles {
+	opacity: 0;
+	height: 250px;
+	background-image: url("./images/body/center/poles.png");
+	background-repeat: repeat-x;
+	background-size: calc(var(--citysize) * 2);
+	background-position-y: 69px;
+	animation: fadein 1s cubic-bezier(0.86,-0.01, 0.58, 1.1) 1s, poles 9.25s linear 0s infinite;
+	animation-fill-mode: forwards;
+}
+#center {
+	padding-top: 50px;
+	opacity: 0;
+	background-color: rgb(17, 17, 40);
+	background-repeat: repeat;
+	height: 2000px;
+	animation: fadein 1s cubic-bezier(0.86,-0.01, 0.58, 1.1) 1s;
+	animation-fill-mode: forwards;
+}
+.up {
+	margin-top: 50px;
+	animation: fadein 0.75s cubic-bezier(0.86,-0.01, 0.58, 1.1) 0s;
+}
+.row {
+	vertical-align: middle;
+	border: 0;
+}
+
+@keyframes stars {
+	from {
+		background-position-x: 0px;
+		background-position-y: 10px;
+	}
+	to {
+		background-position-x: var(--starsize);
+		background-position-y: var(--starsize);
+	}
+}
+@keyframes poles {
+	from {
+		background-position-x: 0px;
+	}
+	to {
+		background-position-x: calc(var(--citysize) * 2);
+	}
+	
+}
+@keyframes city {
+	
+	from {
+		background-position-x: 0px;
+	}
+	to {
+		background-position-x: var(--citysize);
+	}
+	
+}
+@keyframes madMoon {
+	from {right: 25%;}
+	to {right: -90px}
+}
+@keyframes squishyMoon {
+	0% { width: 200px; }
+	100% { width: 100px; }
+}
+
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+@keyframes fadeout {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}

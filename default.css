@@ -1,0 +1,68 @@
+@font-face{
+	font-family: main;
+	src: url("./font/mania.ttf");
+}
+
+
+html {
+	position: relative;
+	box-sizing: border-box;
+	color: rgb(231, 211, 247);
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	align-items: center;
+	text-align: center;
+	align-self: center;
+}
+body{
+	margin: 0; /* don't delete */
+}
+
+img {
+	object-fit: contain;
+	padding: 0;
+	display: block;
+	margin: 0 auto;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+text {
+	margin-bottom: 12.5px;
+}
+
+h1 {
+	font-size: 60px;
+}
+h2 {
+	font-size: 30px;
+}
+
+
+a:link {
+	color: rgb(19, 74, 175);
+	text-shadow: 2px 2px rgb(14, 30, 122);
+}
+a:visited {
+	color: rgb(71, 72, 176);
+	text-shadow: 2px 2px rgb(37, 31, 108);
+}
+a:hover {
+	color: rgb(19, 141, 175);
+	text-shadow: 2px 2px rgb(14, 118, 122);
+}
+a:active {
+	color: rgb(9, 38, 91);
+	text-shadow: 2px 2px rgb(5, 17, 83);
+}
+
+.mainfnt {
+	font-family: main;
+	font-weight: lighter;
+	text-shadow: 2px 2px rgb(93, 0, 155);
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
